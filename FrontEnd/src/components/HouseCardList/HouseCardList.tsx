@@ -4,6 +4,7 @@ import React, { FunctionComponent } from 'react';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
+
 import { HouseCardLandLord, HouseCardStudent } from './HouseCard';
 import styles from './HouseCardList.module.scss';
 
@@ -77,7 +78,7 @@ export const BrowsingStudentList: FunctionComponent<BrowsingListProps> = ({
   );
 };
 
-const BrowsingList: FunctionComponent<{
+const HouseCardList: FunctionComponent<{
   postType: PostingType;
   numListingsShown?: number;
 }> = ({ postType, numListingsShown }) => {
@@ -92,4 +93,4 @@ const BrowsingList: FunctionComponent<{
   );
 };
 
-export default BrowsingList;
+export default HouseCardList;
