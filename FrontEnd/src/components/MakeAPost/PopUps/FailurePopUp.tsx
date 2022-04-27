@@ -4,7 +4,6 @@ import styles from './PopUp.module.scss';
 import { Modal, Subtitle1, Button, Subtitle2 } from '@basics';
 import { MakeAPost } from '@icons';
 import cn from 'classnames';
-
 interface FailurePopUpProps extends PopUpProps {
   retry: () => any;
 }
@@ -33,8 +32,13 @@ const FailurePopUp: FunctionComponent<FailurePopUpProps> = ({
     </div>
     <div className={cn(styles.failPopUpBottom, styles.modalBottomWrapper)}>
       <div>
-        <Subtitle2>Support Email</Subtitle2>
-        <div className={styles.supportEmail}>homehubdope@gmail.com</div>
+        <Subtitle2>
+          <a
+            href="mailto:homehubdope@gmail.com"
+            className={styles.linkText}>
+            Support Email
+          </a>
+        </Subtitle2>
       </div>
       <Button className="text-center" onClick={retry}>
         <Subtitle2>Post again</Subtitle2>
@@ -44,3 +48,11 @@ const FailurePopUp: FunctionComponent<FailurePopUpProps> = ({
 );
 
 export default FailurePopUp;
+
+/*
+mail link part I took out
+        <div className={styles.supportEmail}>
+          <a href="homehubdope@gmail.com">mail link</a>
+        </div>
+        <a href="mailto:homehubdope@gmail.com"> Support Email</a>
+*/

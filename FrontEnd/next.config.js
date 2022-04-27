@@ -25,7 +25,6 @@ module.exports = withPlugins(
     ],
   ],
   {
-    webpack5: false,
     sassOptions: {
       // include the path to the scss folder for easy access (it allows you to do things like
       // "@import 'utils'" without having to specify the path)

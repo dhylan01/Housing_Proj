@@ -30,15 +30,15 @@ export const getDuration = async (
       (response, status) => {
         if (status === google.maps.DistanceMatrixStatus.OK) {
           // check the resulting element for success or failure
-          const result = response.rows[0].elements[0];
+          const result = response?.rows[0].elements[0];
           const Statuses = google.maps.DistanceMatrixElementStatus;
 
-          if (result.status === Statuses.OK) {
+          if (result?.status === Statuses.OK) {
             resolve(result.duration);
-          } else if (result.status === Statuses.ZERO_RESULTS) {
+          } else if (result?.status === Statuses.ZERO_RESULTS) {
             // TODO need to add fallback here (i.e. use driving instead), but also somehow handle telling users that there is no public transportation route
             resolve(undefined);
-          } else if (result.status === Statuses.NOT_FOUND) {
+          } else if (result?.status === Statuses.NOT_FOUND) {
             reject(result.status);
           }
         } else {
