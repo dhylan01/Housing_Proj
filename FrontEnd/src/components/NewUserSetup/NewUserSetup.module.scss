@@ -3,11 +3,9 @@
   padding-left: 0;
 }
 
-.textArea {
-  
-  textarea {
-    
-    height: 19.0625rem !important;
+.bio {
+  .textArea textarea {
+    height: 19.0625rem;
   }
 }
 
@@ -55,7 +53,7 @@
   margin-top: 15px;
   color: $primary-400-color;
   padding-bottom: 20px;
-  
+
   @include font-type('subtitle 1');
 }
 .phoneWrapper {
@@ -85,4 +83,3 @@
   padding-bottom: 20px;
   @include font-type('subtitle 1');
 }
-

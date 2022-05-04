@@ -24,7 +24,7 @@ const PostBioPage: FunctionComponent<WizardFormStep<BioPageStore>> = ({
   setStore,
 }) => {
   return (
-    <Container>
+    <Container className={styles.bio}>
       <Row className="row justify-content-md-center m-2">
         <div className={styles.bioAsk}>Lastly if you'd like...</div>
       </Row>
