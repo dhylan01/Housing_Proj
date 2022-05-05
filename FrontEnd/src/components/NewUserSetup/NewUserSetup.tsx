@@ -74,6 +74,7 @@ const NewUserSetup: FunctionComponent = () => {
         {
           ...namePageInitialStore,
           name: showNewUserPopup.name,
+          email: showNewUserPopup.email,
         },
         {
           ...educationPageInitialStore,
