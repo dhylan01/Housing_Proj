@@ -6,6 +6,9 @@ module.exports = {
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
+    //figma maybe take out @ sign 
+    //use  import 'storybook-addon-designs/register' if using Storybook@5.0.x
+    'storybook-addon-designs',
     // Handle SCSS modules
     {
       name: '@storybook/preset-scss',
